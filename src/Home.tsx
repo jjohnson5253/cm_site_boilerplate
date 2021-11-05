@@ -9,7 +9,7 @@ import * as anchor from "@project-serum/anchor";
 import "./Home.css";
 
 import Background from './underwater_bg.jpg';
-import puff0 from './puffers/0.png'
+import puffer_sequence from './puffer_sequence.gif'
 import title_logo from './title_logo.png'
 
 //import { LAMPORTS_PER_SOL } from "@solana/web3.js";
@@ -22,7 +22,7 @@ import {
   awaitTransactionSignatureConfirmation,
   getCandyMachineState,
   mintOneToken,
-  shortenAddress,
+  /*shortenAddress,*/
 } from "./candy-machine";
 
 const ConnectButton = styled(WalletDialogButton)`
@@ -253,8 +253,8 @@ const Home = (props: HomeProps) => {
       >
 
       <img 
-        src={puff0}
-        alt="puff0"
+        src={puffer_sequence}
+        alt="puffer_sequence"
         height='350px'
       />
 
