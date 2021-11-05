@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Countdown from "react-countdown";
-import { Button, CircularProgress, Snackbar } from "@material-ui/core";
+import { /*Button,*/ CircularProgress, Snackbar } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
 
 import * as anchor from "@project-serum/anchor";
@@ -25,20 +25,17 @@ import {
   /*shortenAddress,*/
 } from "./candy-machine";
 
-const ConnectButton = styled(WalletDialogButton)`
+/*const ConnectButton = styled(WalletDialogButton)`
 background-color:#F17B28;
 color:black;
 font-weight: bold;`
-;
+;*/
 
 const CounterText = styled.span``; // add your styles here
 
 const MintContainer = styled.div``; // add your styles here
 
-const MintButton = styled(Button)`
-background-color:#F17B28;
-color:black;
-font-weight: bold;`; // add your styles here
+const MintButton = styled(WalletDialogButton)`background-color:#F17B28; color:black; font-weight: bold;`; // add your styles here
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -187,7 +184,7 @@ const Home = (props: HomeProps) => {
       backgroundPosition: "center center",
       backgroundAttachment: "fixed",
       backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
+      /*backgroundRepeat: "no-repeat",*/
       }}>
 
       <div style={{
@@ -221,7 +218,7 @@ const Home = (props: HomeProps) => {
         style={{
           textAlign: 'center',
           flex:'1 0 auto',
-          marginLeft:'35px',
+          marginLeft:'-65px',
         }}>
         <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
         <img
@@ -235,9 +232,11 @@ const Home = (props: HomeProps) => {
         <div style={{
           float:"right",
         }}>
+          {/*
         <ConnectButton>
           {wallet ? "Connected" : "Connect Wallet"}
         </ConnectButton>
+          */}
         </div>
       </div>
 
@@ -263,6 +262,7 @@ const Home = (props: HomeProps) => {
               disabled={isSoldOut || isMinting || !isActive}
               onClick={onMint}
               variant="contained"
+              className="mintButtonClass"
             >
               {isSoldOut ? (
                 "SOLD OUT"
