@@ -1,0 +1,8 @@
+a{
+    color:#F17B28;
+    text-shadow: 0 0 5px #000;
+}
+a:hover
+{
+    opacity: 0.7;
+}
