@@ -27,8 +27,9 @@ import {
 
 const ConnectButton = styled(WalletDialogButton)`
 background-color:#F17B28;
-color:white;
-text-shadow: 0 0 4px #000;`;
+color:black;
+font-weight: bold;`
+;
 
 const CounterText = styled.span``; // add your styles here
 
@@ -36,8 +37,8 @@ const MintContainer = styled.div``; // add your styles here
 
 const MintButton = styled(Button)`
 background-color:#F17B28;
-color:white;
-text-shadow: 0 0 4px #000;`; // add your styles here
+color:black;
+font-weight: bold;`; // add your styles here
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
