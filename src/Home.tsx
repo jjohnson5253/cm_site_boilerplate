@@ -287,8 +287,11 @@ const Home = (props: HomeProps) => {
         {/*}{wallet && <p>Total Available: {itemsAvailable}</p>}{*/}
 
         {/*}{wallet && <p>Redeemed: {itemsRedeemed}</p>}{*/}
-
+        <div style={{
+          textShadow: "0 0 5px #000",
+        }}>
         {wallet && <p>Remaining: {itemsRemaining}</p>}
+        </div>
         </div>
       </div>
 
