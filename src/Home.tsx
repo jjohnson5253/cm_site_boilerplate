@@ -7,6 +7,8 @@ import Alert from "@material-ui/lab/Alert";
 import * as anchor from "@project-serum/anchor";
 
 import Background from './underwater_bg.jpg';
+import puff0 from './puffers/0.png'
+import title_logo from './title_logo.png'
 
 //import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 
@@ -170,7 +172,7 @@ const Home = (props: HomeProps) => {
   return (
     <main style={{
       display:"flex",
-      backgroundColor: "red",
+      /*backgroundColor: "red",*/
       backgroundImage: `url(${Background})`,
       height: "100vh",
       backgroundPosition: "center center",
@@ -192,9 +194,16 @@ const Home = (props: HomeProps) => {
           display: "flex",
           justifyContent: "space-between",
         }}>
-        {wallet && (
+        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
+          <i className='fab fa-twitter fa-2x'></i>
+        </a>
+        <a href="https://www.discord.gg/JGFyenFtsy">
+          <i className='fab fa-discord fa-2x'></i>
+        </a>
+        <img src={title_logo} alt="title_logo" />
+        {/*{wallet && (
           <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
-        )}
+        )}*/}
         <div></div>
         <ConnectButton>
           {wallet ? "Connected" : "Connect Wallet"}
@@ -211,6 +220,9 @@ const Home = (props: HomeProps) => {
           flexDirection: "column",
         }}
       >
+
+      <img src={puff0} alt="puff0" />
+
         <MintContainer>
             <MintButton
               disabled={isSoldOut || isMinting || !isActive}
