@@ -192,7 +192,8 @@ const Home = (props: HomeProps) => {
 
       <div style={{
         padding: 30,
-        /*backgroundColor:"red",*/
+        backgroundColor:"rgba(0, 0, 0, 0.4)",
+
         display:"flex",
         flex: 1,
         flexDirection: "column",
