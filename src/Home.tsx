@@ -6,6 +6,8 @@ import Alert from "@material-ui/lab/Alert";
 
 import * as anchor from "@project-serum/anchor";
 
+import "./Home.css";
+
 import Background from './underwater_bg.jpg';
 import puff0 from './puffers/0.png'
 import title_logo from './title_logo.png'
@@ -29,7 +31,8 @@ const CounterText = styled.span``; // add your styles here
 
 const MintContainer = styled.div``; // add your styles here
 
-const MintButton = styled(Button)``; // add your styles here
+const MintButton = styled(Button)`
+backgroundColor:#F17B28;`; // add your styles here
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -194,13 +197,13 @@ const Home = (props: HomeProps) => {
           display: "flex",
           /*justifyContent: "space-between",*/
         }}>
-        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
+        <a color='red' target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
           <i className='fab fa-twitter fa-2x'></i>
         </a>
         <div style={{
           marginLeft:'15px',
         }}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.discord.gg/JGFyenFtsy">
+        <a color='red' target="_blank" rel="noopener noreferrer" href="https://www.discord.gg/JGFyenFtsy">
           <i className='fab fa-discord fa-2x' ></i>
         </a>
         </div>
