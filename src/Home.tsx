@@ -192,9 +192,13 @@ const Home = (props: HomeProps) => {
 
       <div style={{
         padding: 30,
+        /*backgroundColor:"red",*/
         display:"flex",
         flex: 1,
         flexDirection: "column",
+        maxWidth: "800px",
+        marginLeft: "auto",
+        marginRight: "auto",
       }}>
 
       <div
@@ -203,13 +207,13 @@ const Home = (props: HomeProps) => {
           display: "flex",
           /*justifyContent: "space-between",*/
         }}>
-        <a color='red' target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
+        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
           <i className='fab fa-twitter fa-2x'></i>
         </a>
         <div style={{
           marginLeft:'15px',
         }}>
-        <a color='red' target="_blank" rel="noopener noreferrer" href="https://www.discord.gg/JGFyenFtsy">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.discord.gg/JGFyenFtsy">
           <i className='fab fa-discord fa-2x' ></i>
         </a>
         </div>
@@ -219,9 +223,10 @@ const Home = (props: HomeProps) => {
           flex:'1 0 auto',
           marginLeft:'35px',
         }}>
+        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
         <img
           height='60px'
-          src={title_logo} alt="title_logo"/>
+          src={title_logo} alt="title_logo"/> </a>
         </div>
         {/*{wallet && (
           <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
@@ -247,7 +252,11 @@ const Home = (props: HomeProps) => {
         }}
       >
 
-      <img src={puff0} alt="puff0" />
+      <img 
+        src={puff0}
+        alt="puff0"
+        height='350px'
+      />
 
         <MintContainer>
             <MintButton
