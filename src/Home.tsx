@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Countdown from "react-countdown";
-import { /*Button,*/ CircularProgress, Snackbar } from "@material-ui/core";
+import { Button, CircularProgress, Snackbar } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
 
 import * as anchor from "@project-serum/anchor";
@@ -25,17 +25,20 @@ import {
   /*shortenAddress,*/
 } from "./candy-machine";
 
-/*const ConnectButton = styled(WalletDialogButton)`
+const ConnectButton = styled(WalletDialogButton)`
 background-color:#F17B28;
 color:black;
 font-weight: bold;`
-;*/
+;
 
 const CounterText = styled.span``; // add your styles here
 
 const MintContainer = styled.div``; // add your styles here
 
-const MintButton = styled(WalletDialogButton)`background-color:#F17B28; color:black; font-weight: bold;`; // add your styles here
+const MintButton = styled(Button)`
+background-color:#F17B28;
+color:black;
+font-weight: bold;`; // add your styles here
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -184,7 +187,7 @@ const Home = (props: HomeProps) => {
       backgroundPosition: "center center",
       backgroundAttachment: "fixed",
       backgroundSize: "cover",
-      /*backgroundRepeat: "no-repeat",*/
+      backgroundRepeat: "no-repeat",
       }}>
 
       <div style={{
@@ -202,43 +205,40 @@ const Home = (props: HomeProps) => {
         style={{
           /*backgroundColor: "green",*/
           display: "flex",
-          flexDirection: "column",
           /*justifyContent: "space-between",*/
         }}>
+        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
+          <i className='fab fa-twitter fa-2x'></i>
+        </a>
+        <div style={{
+          marginLeft:'15px',
+        }}>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.discord.gg/JGFyenFtsy">
+          <i className='fab fa-discord fa-2x' ></i>
+        </a>
+        </div>
         <div
         style={{
           textAlign: 'center',
           flex:'1 0 auto',
-          /*marginLeft:'35px',*/
+          marginLeft:'35px',
         }}>
+        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
         <img
           height='60px'
-          src={title_logo} alt="title_logo"/>
-        </div>
-        <div style={{
-          marginTop:'10px',
-          textAlign: 'center',
-          flex:'1 0 auto',
-        }}>
-        <a style={{marginRight:"15px"}} target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
-          <i className='fab fa-twitter fa-2x'></i>
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.discord.gg/JGFyenFtsy">
-          <i className='fab fa-discord fa-2x' ></i>
-        </a>
+          src={title_logo} alt="title_logo"/> </a>
         </div>
         {/*{wallet && (
           <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
         )}*/}
         <div></div>
-        {/*<div style={{
+        <div style={{
           float:"right",
         }}>
-          
         <ConnectButton>
           {wallet ? "Connected" : "Connect Wallet"}
         </ConnectButton>
-      </div>*/}
+        </div>
       </div>
 
       <div
@@ -263,7 +263,6 @@ const Home = (props: HomeProps) => {
               disabled={isSoldOut || isMinting || !isActive}
               onClick={onMint}
               variant="contained"
-              className="mintButtonClass"
             >
               {isSoldOut ? (
                 "SOLD OUT"
