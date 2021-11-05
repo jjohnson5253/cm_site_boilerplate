@@ -202,42 +202,43 @@ const Home = (props: HomeProps) => {
         style={{
           /*backgroundColor: "green",*/
           display: "flex",
+          flexDirection: "column",
           /*justifyContent: "space-between",*/
         }}>
-        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
-          <i className='fab fa-twitter fa-2x'></i>
-        </a>
-        <div style={{
-          marginLeft:'15px',
-        }}>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.discord.gg/JGFyenFtsy">
-          <i className='fab fa-discord fa-2x' ></i>
-        </a>
-        </div>
         <div
         style={{
           textAlign: 'center',
           flex:'1 0 auto',
-          marginLeft:'-65px',
+          /*marginLeft:'35px',*/
         }}>
-        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
         <img
           height='60px'
-          src={title_logo} alt="title_logo"/> </a>
+          src={title_logo} alt="title_logo"/>
+        </div>
+        <div style={{
+          marginTop:'10px',
+          textAlign: 'center',
+          flex:'1 0 auto',
+        }}>
+        <a style={{marginRight:"15px"}} target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
+          <i className='fab fa-twitter fa-2x'></i>
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.discord.gg/JGFyenFtsy">
+          <i className='fab fa-discord fa-2x' ></i>
+        </a>
         </div>
         {/*{wallet && (
           <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
         )}*/}
         <div></div>
-        <div style={{
+        {/*<div style={{
           float:"right",
         }}>
-          {/*
+          
         <ConnectButton>
           {wallet ? "Connected" : "Connect Wallet"}
         </ConnectButton>
-          */}
-        </div>
+      </div>*/}
       </div>
 
       <div
