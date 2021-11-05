@@ -192,22 +192,39 @@ const Home = (props: HomeProps) => {
         style={{
           /*backgroundColor: "green",*/
           display: "flex",
-          justifyContent: "space-between",
+          /*justifyContent: "space-between",*/
         }}>
         <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/">
           <i className='fab fa-twitter fa-2x'></i>
         </a>
-        <a href="https://www.discord.gg/JGFyenFtsy">
-          <i className='fab fa-discord fa-2x'></i>
+        <div style={{
+          marginLeft:'15px',
+        }}>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.discord.gg/JGFyenFtsy">
+          <i className='fab fa-discord fa-2x' ></i>
         </a>
-        <img src={title_logo} alt="title_logo" />
+        </div>
+        <div
+        style={{
+          textAlign: 'center',
+          flex:'1 0 auto',
+          marginLeft:'35px',
+        }}>
+        <img
+          height='60px'
+          src={title_logo} alt="title_logo"/>
+        </div>
         {/*{wallet && (
           <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
         )}*/}
         <div></div>
+        <div style={{
+          float:"right",
+        }}>
         <ConnectButton>
           {wallet ? "Connected" : "Connect Wallet"}
         </ConnectButton>
+        </div>
       </div>
 
       <div
